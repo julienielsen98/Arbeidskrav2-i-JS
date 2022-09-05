@@ -1,0 +1,232 @@
+body {
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5) url(/assets/school-background.jpeg);
+  background-attachment: fixed;
+  background-blend-mode: darken;
+  width: 100%;
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  max-width: 100%;
+}
+
+/* Header */
+
+h1 {
+  padding: 150px;
+  font-size: 60px;
+  text-align: center;
+  position: relative;
+  text-transform: uppercase;
+  color: white;
+}
+
+.logo {
+  display: block;
+  padding: 20px;
+  float: left;
+  font-size: 20px;
+}
+
+.hogwarts-logo {
+  width: 5em;
+  float: left;
+  padding: 0 30px;
+}
+
+.hogwarts-logo:hover {
+  opacity: 80%;
+}
+
+/* navigation */
+a {
+  color: #aa9270;
+}
+
+ul {
+  align-items: center;
+  list-style-type: none;
+  float: left;
+  padding: 0.5em;
+}
+
+li {
+  display: inline-block;
+  padding: 1em;
+  text-align: center;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.create-staff-btn {
+  padding: 10px;
+  color: white;
+  background-color: #265c5c;
+  width: 250px;
+  border: 0 none;
+  border-radius: 20px;
+  margin: 50px;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.save-staff,
+.cancel-staff {
+  color: white;
+  border: 0 none;
+  border-radius: 20px;
+  background-color: #aa9270;
+  width: 250px;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.input-container {
+  display: none;
+}
+.input-container.show {
+  display: block;
+}
+
+.create-name,
+.create-house,
+.create-patronus {
+  padding-left: 10px;
+  height: 50px;
+  width: 200px;
+  margin: 20px;
+  border: 0 none;
+  border-radius: 20px;
+}
+::placeholder {
+  font-family: "bluu next" sans-serif;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+}
+
+img {
+  grid-area: auto;
+  max-height: 300px;
+  opacity: 1;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+/*Colors of Hogwarts Houses:
+Ravenclaw = Blue
+Slytherin = Green
+Gryffindor = Red
+Hufflepuff = Yellow 
+No house = Brown */
+
+.staff-ravenclaw {
+  background-color: #385170;
+  width: 300px;
+  display: inline-block;
+  margin: 1rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.staff-ravenclaw h3,
+.staff-ravenclaw p {
+  color: #fff;
+}
+
+.staff-slytherin {
+  background-color: #9fd3c7;
+  width: 300px;
+  display: inline-block;
+  margin: 1rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.staff-slytherin h3,
+.staff-slytherin p {
+  color: #000;
+}
+
+.staff-gryffindor {
+  background-color: #c24d2c;
+  width: 300px;
+  display: inline-block;
+  margin: 1rem;
+  border-radius: 4px;
+
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.staff-gryffindor h3,
+.staff-gryffindor p {
+  color: #fff;
+}
+
+.staff-hufflepuff {
+  background-color: #ffc93c;
+  width: 300px;
+  display: inline-block;
+  margin: 1rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.staff-hufflepuff h3,
+.staff-hufflepuff p {
+  color: #000;
+}
+
+.staff {
+  background-color: #83580b;
+  width: 300px;
+  display: inline-block;
+  margin: 1rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.staff h3,
+.staff p {
+  color: #fff;
+}
+
+.delete-btn,
+.edit-btn {
+  padding: 5px;
+  color: white;
+  background-color: #265c5c;
+  width: 150px;
+  border: 0 none;
+  border-radius: 20px;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+input {
+  color: #265c5c;
+}
