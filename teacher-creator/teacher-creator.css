@@ -1,0 +1,300 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+main {
+  max-width: 100%;
+}
+
+/* Header */
+
+h1 {
+  padding: 150px;
+  font-size: 50px;
+  text-align: center;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.logo {
+  display: block;
+  padding: 20px;
+  float: left;
+  font-size: 20px;
+}
+
+a {
+  color: #aa9270;
+}
+
+ul {
+  align-items: center;
+  list-style-type: none;
+  float: left;
+  padding: 0.5em;
+}
+
+li {
+  display: inline-block;
+  padding: 1em;
+  text-align: center;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.create-staff-btn {
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.create-staff-btn:hover {
+  border: 1px solid #ffffff;
+  background-color: #080706;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.save-staff,
+.cancel-staff {
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.save-staff:hover,
+.cancel-staff:hover {
+  border: 1px solid #ffffff;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.input-container {
+  display: none;
+}
+.input-container.show {
+  display: block;
+}
+
+.create-name,
+.create-house,
+.create-patronus {
+  padding-left: 10px;
+  height: 50px;
+  width: 250px;
+  margin: 20px;
+  border: rgba(0, 0, 0, 0.589) solid 1px;
+  border-radius: 20px;
+}
+::placeholder {
+  font-family: "bluu next" sans-serif;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+}
+
+img {
+  grid-area: auto;
+  max-height: 270px;
+  max-width: 250px;
+  opacity: 1;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  border-radius: 5px;
+}
+
+.staff-ravenclaw {
+  background-image: linear-gradient(
+    to bottom,
+    #11126b,
+    #1e3a64bb,
+    #274470bb,
+    #11126b
+  );
+
+  width: 300px;
+  display: inline-block;
+  margin: 1rem;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #452821;
+  border-radius: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.staff-ravenclaw h3,
+.staff-ravenclaw p {
+  color: #fff;
+}
+
+.staff-slytherin {
+  background-image: linear-gradient(
+    to right,
+    #152222,
+    #265c5c,
+    #265c5c,
+    #193535
+  );
+  width: 300px;
+  display: inline-block;
+  margin: 1rem;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ffffff00;
+  border-radius: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.staff-slytherin h3,
+.staff-slytherin p {
+  color: #ffffff;
+}
+
+.staff-gryffindor {
+  color: #ffffff;
+  background-image: linear-gradient(
+    to right,
+    #7c4a07,
+    #380e03,
+    #380e03,
+    #7c4a07
+  );
+  width: 300px;
+  display: inline-block;
+  margin: 1rem;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ffffff00;
+  border-radius: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.staff-gryffindor h3,
+.staff-gryffindor p {
+  color: #fff;
+}
+
+.staff-hufflepuff {
+  background-image: linear-gradient(
+    to right,
+    #865d03,
+    #f0d019bb,
+    #ccb013bb,
+    #865d03
+  );
+  display: inline-block;
+  margin: 1rem;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ffffff00;
+  border-radius: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.15);
+  width: 300px;
+  display: inline-block;
+  margin: 1rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.staff-hufflepuff h3,
+.staff-hufflepuff p {
+  color: #000;
+}
+
+.staff {
+  background-image: linear-gradient(
+    to right,
+    #121824,
+    #7b7a76bb,
+    #969591bb,
+    #121824
+  );
+  width: 300px;
+  display: inline-block;
+  margin: 1rem;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ffffff00;
+  border-radius: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.15);
+  width: 300px;
+  display: inline-block;
+  margin: 1rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.staff h3,
+.staff p {
+  color: #fff;
+}
+
+.delete-btn,
+.edit-btn {
+  padding: 5px;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  width: 150px;
+  border: 0 none;
+  border-radius: 20px;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.delete-btn:hover,
+.edit-btn:hover {
+  background-color: rgba(214, 211, 211, 0.574);
+}
+
+input {
+  color: #265c5c;
+}

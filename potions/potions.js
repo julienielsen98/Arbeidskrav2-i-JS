@@ -29,7 +29,11 @@ function createHtmlInfoSeverusSnape(severusSnape) {
   const wand = document.createElement("p");
   wand.textContent = "Wand: ";
   infoDiv.append(wand);
-  if (severusSnape.wand.core.length > 0 || severusSnape.wand.wood.length > 0 || severusSnape.wand.length.length > 0) {
+  if (
+    severusSnape.wand.core.length > 0 ||
+    severusSnape.wand.wood.length > 0 ||
+    severusSnape.wand.length.length > 0
+  ) {
     wand.textContent += `wood: ${wand.wood},
     core: ${wand.core},
     length: ${wand.length}`;
@@ -53,14 +57,16 @@ function createHtmlInfoSeverusSnape(severusSnape) {
 function createCard(student) {
   const card = document.createElement("div");
   card.classList.add("card");
-  card.style.backgroundColor = `rgb(${Math.floor(Math.random() * 100 + 155)}, ${Math.floor(
-    Math.random() * 100 + 155
-  )}, ${Math.floor(Math.random() * 100 + 155)})`;
+  card.style.backgroundColor = `rgb(${Math.floor(
+    Math.random() * 90 + 10
+  )}, ${Math.floor(Math.random() * 90 + 10)}, ${Math.floor(
+    Math.random() * 10 + 50
+  )})`;
 
   const img = document.createElement("img");
   img.src = student.image;
   if (student.image === "") {
-    img.src = "./noimage.png";
+    img.src = "../assets/default-img.webp";
   }
   card.append(img);
 
@@ -84,16 +90,26 @@ function createCard(student) {
   deleteStudent.textContent = "Delete student";
   cardContent.append(deleteStudent);
   deleteStudent.addEventListener(`click`, async () => {
-    const answer = prompt("Do you want to delete this student? Write yes or no");
+    const answer = prompt(
+      "Do you want to delete this student? Write yes or no"
+    );
     if (answer.toLowerCase() === "yes") {
       // get list of unused students
       const students = await loadCharactersStudents();
       const existingStudentNames = tenFirstStudents.map((stud) => stud.name);
-      const unusedStudents = students.filter((stud) => existingStudentNames.includes(stud.name) === false);
+      const unusedStudents = students.filter(
+        (stud) => existingStudentNames.includes(stud.name) === false
+      );
 
       // replace deleted student with random unused student
-      const index = tenFirstStudents.findIndex((stud) => stud.name === student.name);
-      tenFirstStudents.splice(index, 1, unusedStudents[Math.floor(Math.random() * unusedStudents.length)]);
+      const index = tenFirstStudents.findIndex(
+        (stud) => stud.name === student.name
+      );
+      tenFirstStudents.splice(
+        index,
+        1,
+        unusedStudents[Math.floor(Math.random() * unusedStudents.length)]
+      );
       addStudentsToHtml(tenFirstStudents);
     }
   });

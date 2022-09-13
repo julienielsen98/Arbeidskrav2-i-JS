@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="task3.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="teacher-creator.css" />
     <title>Teacher Creator</title>
   </head>
   <body>
@@ -13,16 +13,16 @@
       <nav>
         <ul>
           <li>
-            <a href="index.html">Frontpage</a>
+            <a href="../index.html">Frontpage</a>
           </li>
           <li>
-            <a href="task1.html">Yearbook</a>
+            <a href="../yearbook/yearbook.html">Yearbook</a>
           </li>
           <li>
-            <a href="potions/index.html">Potions class</a>
+            <a href="../potions/potions.html">Potions class</a>
           </li>
           <li>
-            <a class="active" href="task3.html">Teacher creator</a>
+            <a class="active" href="teacher-creator.html">Teacher creator</a>
           </li>
         </ul>
       </nav>
@@ -31,7 +31,9 @@
     <main>
       <div class="container">
         <h1>Our Teachers</h1>
-        <button onclick="showAddStaff()" class="create-staff-btn">Create new staff</button>
+        <button onclick="showAddStaff()" class="create-staff-btn">
+          Create new staff
+        </button>
         <div class="input-container">
           <input type="text" placeholder="Name:" class="create-name" required />
 
@@ -43,14 +45,19 @@
             <option value="Other">Other</option>
           </select>
 
-          <input type="text" placeholder="Patronus:" class="create-patronus" required />
+          <input
+            type="text"
+            placeholder="Patronus:"
+            class="create-patronus"
+            required
+          />
           <button onclick="saveStaff()" class="save-staff">Save</button>
           <button onclick="cancelStaff()" class="cancel-staff">Cancel</button>
         </div>
       </div>
 
       <ul class="staff-list"></ul>
-      <script src="task3.js"></script>
+      <script src="teacher-creator.js"></script>
     </main>
   </body>
 </html>

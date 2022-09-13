@@ -1,13 +1,3 @@
-//1.fetch HP API http://hp-api.herokuapp.com/api/characters - view all characters
-//http://hp-api.herokuapp.com/api/characters/students - view all characters who are Hogwarts students during the book series
-//Oversikt over alle husene: createElement houseCard per hus.
-//HouseCard onClick, function show students.
-//StudentsCard: Bilde, navn, hus, alder, lever/lever ikke.
-//if student Alive = false, style.color: red;
-//if no picture = default picture
-//if dead = age not show up
-//if age unknown = "uvisst"
-
 getCharacters("http://hp-api.herokuapp.com/api/characters").then(() => {
   console.log(characterArray);
 });
@@ -54,7 +44,7 @@ let gryffindorContainer = document.getElementById("Gryffinfor-house");
 let gryffindorCard = document.createElement("div");
 let gryffindorBtn = document.createElement("button");
 gryffindorBtn.classList.add("Gryffindor-btn");
-gryffindorBtn.innerText = "SHOW STUDENTS OF GRYFFINDOR";
+gryffindorBtn.innerText = "STUDENTS OF GRYFFINDOR";
 gryffindorBtn.addEventListener("click", () => {
   listStudents("Gryffindor", gryffindorCard);
 });
@@ -63,7 +53,7 @@ let slytherinContainer = document.getElementById("Slytherin-house");
 let slytherinCard = document.createElement("div");
 let slytherinBtn = document.createElement("button");
 slytherinBtn.classList.add("Slytherin-btn");
-slytherinBtn.innerText = "SHOW STUDENTS OF SLYTHERIN";
+slytherinBtn.innerText = "STUDENTS OF SLYTHERIN";
 slytherinBtn.addEventListener("click", () => {
   listStudents("Slytherin", slytherinCard);
 });
@@ -72,7 +62,7 @@ let ravenclawContainer = document.getElementById("Ravenclaw-house");
 let ravenclawCard = document.createElement("div");
 let ravenclawBtn = document.createElement("button");
 ravenclawBtn.classList.add("Ravenclaw-btn");
-ravenclawBtn.innerText = "SHOW STUDENTS OF RAVENCLAW";
+ravenclawBtn.innerText = "STUDENTS OF RAVENCLAW";
 ravenclawBtn.addEventListener("click", () => {
   listStudents("Ravenclaw", ravenclawCard);
 });
@@ -81,13 +71,18 @@ let hufflepuffContainer = document.getElementById("Hufflepuff-house");
 let hufflepuffCard = document.createElement("div");
 let hufflepuffBtn = document.createElement("button");
 hufflepuffBtn.classList.add("Hufflepuff-btn");
-hufflepuffBtn.innerText = "SHOW STUDENTS OF HUFFLEPUFF";
+hufflepuffBtn.innerText = "STUDENTS OF HUFFLEPUFF";
 hufflepuffBtn.addEventListener("click", () => {
   listStudents("Hufflepuff", hufflepuffCard);
 });
 
 let houseContainer = document.getElementById("house-container");
-houseContainer.append(gryffindorContainer, slytherinContainer, ravenclawContainer, hufflepuffContainer);
+houseContainer.append(
+  gryffindorContainer,
+  slytherinContainer,
+  ravenclawContainer,
+  hufflepuffContainer
+);
 gryffindorContainer.append(gryffindorBtn, gryffindorCard);
 slytherinContainer.append(slytherinBtn, slytherinCard);
 ravenclawContainer.append(ravenclawBtn, ravenclawCard);
@@ -147,7 +142,11 @@ function addStudent() {
   if (newStudent.image === "") {
     newStudent.image = `https://cdn.pixabay.com/photo/2017/08/19/08/52/albus-dumbledore-2657724_1280.png`;
   }
-  if (newStudent.name === "" || newStudent.house === "" || newStudent.yearOfBirth === "") {
+  if (
+    newStudent.name === "" ||
+    newStudent.house === "" ||
+    newStudent.yearOfBirth === ""
+  ) {
     alert("Name, house and year of birth must be filled in");
   } else if (
     newStudent.house === `Gryffindor` ||

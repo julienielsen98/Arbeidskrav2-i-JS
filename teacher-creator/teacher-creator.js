@@ -175,7 +175,7 @@ function showStaff(staff) {
     let staffImg = document.createElement("img");
     staffImg.classList.add(".staff-img");
     if (staff[i].image == "") {
-      staffImg.src = "./assets/default-img.jpeg";
+      staffImg.src = "../assets/default-img.webp";
     } else {
       staffImg.src = staff[i].image;
     }
@@ -275,7 +275,7 @@ function createStaffCard(name, house, patronus) {
   let staffImg = document.createElement("img");
   staffImg.classList.add(".staff-img");
 
-  staffImg.src = "./assets/default-img.jpeg";
+  staffImg.src = "../assets/default-img.webp";
 
   staffCard.append(staffName, staffHouse, staffPatronus, staffImg, deleteBtn);
   return staffCard;
