@@ -275,6 +275,7 @@ input {
     #ccb013bb,
     #865d03
   );
+  color: white;
   margin: 10px 0px 10px 0px;
   text-align: center;
   display: flex;
@@ -291,7 +292,7 @@ input {
 }
 
 .Hufflepuff-card > ul > li > h3 {
-  color: #000000;
+  color: #ffffff;
 }
 
 .Hufflepuff-card:hover {
@@ -347,10 +348,12 @@ ul {
 
 .character > h2 {
   grid-area: name;
+  color: #000000;
 }
 
 .character > .house {
   grid-area: house;
+  color: #000000;
 }
 .character > .age {
   grid-area: age;
